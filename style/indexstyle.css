@@ -196,3 +196,14 @@ a {
   transition: 0.5s;
   font-family: "Open Sans", sans-serif;
 }
+
+#preloader {
+  background: rgb(0, 0, 0)
+    url("https://gifimage.net/wp-content/uploads/2018/11/circle-loader-gif-2.gif")
+    no-repeat center center;
+  background-size: 20%;
+  height: 170vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}

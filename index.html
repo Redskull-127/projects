@@ -15,10 +15,15 @@
     crossorigin="anonymous"></script>
   <link rel="icon" type="image/gif" href="assets/images/final.gif">
   <script src="script/indexscript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 
 <body>
+  <div id="preloader"></div>
   <center>
+
+
     <h1 style="padding-top: 75px; font-size:xx-large">All Open-Source Projects ...</h1>
     <div class="container" id="scroll">
       <div class="card">
@@ -96,6 +101,12 @@
         </div>
       </div>
   </center>
+  <script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+      loader.style.display = "none";
+    })
+  </script>
 </body>
 
 </html>
