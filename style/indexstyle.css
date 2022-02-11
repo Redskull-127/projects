@@ -11,7 +11,7 @@ body {
 
 .container {
   width: 750px;
-  margin-top: 20px;
+  margin-top: 0px;
   position: relative;
   background-color: transparent;
   display: flex;
