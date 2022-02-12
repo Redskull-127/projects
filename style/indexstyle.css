@@ -17,14 +17,19 @@ body {
   --c2: #4A00E0;
 }
 #typewriter {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .19em; 
   animation: 
     typing 5s steps(40, end),
     blink-caret .75s step-end infinite;
+}
+#typewriter:hover{
+  background: linear-gradient(-40deg, rgb(255, 114, 137),rgb(104, 104, 233));
+  color: whitesmoke;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* The typing effect */
