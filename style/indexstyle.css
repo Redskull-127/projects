@@ -42,7 +42,7 @@ body {
   overflow-x: auto;
   overflow-y: hidden;
   background: linear-gradient(-45deg, var(--d1, #40c9ff), var(--d2, #e81cff) 51%, var(--d1, #40c9ff)) var(--y, 0)/ 200%;
-  box-shadow: 0 20px 50px rgba(65, 63, 63, 0.8);
+  box-shadow: 10px 12px 10px rgba(65, 63, 63, 0.8);
   transition: 0.5s;
   border-radius: 10px 10px;
 }
