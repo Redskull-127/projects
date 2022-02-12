@@ -20,6 +20,7 @@ body {
   overflow: hidden; 
   border-right: .15em solid orange; 
   white-space: nowrap; 
+  color: white;
   margin: 0 auto; 
   letter-spacing: .19em; 
   animation: 
@@ -27,9 +28,11 @@ body {
     blink-caret .75s step-end infinite;
 }
 #typewriter:hover{
-  background: linear-gradient(-40deg, rgb(255, 114, 137),rgb(104, 104, 233));
-  color: whitesmoke;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to right, #f32170,
+                    #ff6b08, #cf23cf, #eedd44);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
 }
 
 /* The typing effect */
