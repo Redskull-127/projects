@@ -17,3 +17,7 @@ function scrolldiv() {
   var elem = document.getElementById("virtybro");
   elem.scrollIntoView();
 }
+function scrolldivvirty() {
+  var elem = document.getElementById("scroll");
+  elem.scrollIntoView();
+}
