@@ -10,6 +10,7 @@ body {
   align-items: center;
   font-family: "Open Sans", sans-serif;
   transition: 0.7s;
+  height: fit-content;
 }
 .body:hover { --x: 100%; }
 .body-1 {
@@ -102,7 +103,7 @@ body {
 }
 
 .container .card {
-  position: relative;
+  position: sticky;
   padding-left: 5px;
   padding-right: 5px;
   padding-top: 10px;
@@ -242,13 +243,18 @@ a {
 }
 
 .container .skull {
-  position: relative;
+  position: sticky;
   /* padding-left: 40%; */
   /* padding-right:40% */
 }
 .container .skull .face {
   width: 1000px;
   height: 200px;
+  transition: 0.4s;
+}
+.container .skull .face2 {
+  width: 1000px;
+  /* height: 500px; */
   transition: 0.4s;
 }
 .container .skull .face.face1 {
@@ -271,8 +277,19 @@ a {
   transition: 0.5s;
   text-align: center;
 }
+.container .skull .face.face1 .content2 {
+  opacity: 0.2;
+  height: fit-content;
+  transition: 0.5s;
+  text-align: center;
+}
 .container .skull:hover .face.face1 .content {
   opacity: 1;
+  font-family: "Open Sans", sans-serif;
+}
+.container .skull:hover .face.face1 .content2 {
+  opacity: 1;
+  height: max-content;
   font-family: "Open Sans", sans-serif;
 }
 .container .skull .face.face1 .content i {
@@ -298,19 +315,18 @@ a {
 }
 
 .sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  height: 100%; 
+  width: 0; 
   position: absolute; 
   z-index: 1; 
   top: 0;
   left: 0;
-  background-color: #111; /* Black*/
+  background-color: #111; 
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  transition: 0.5s; 
 }
 
-/* The sidebar links */
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -320,12 +336,10 @@ a {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
@@ -334,7 +348,6 @@ a {
   margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
 .openbtn {
   font-size: 20px;
   cursor: pointer;
@@ -342,15 +355,16 @@ a {
   color: white;
   padding: 10px 15px;
   border: none;
+  position: absolute;
 }
 
 .openbtn:hover {
   background-color: #444;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
 #main {
-  transition: margin-left .5s; /* If you want a transition effect */
+  transition: margin-left .5s; 
   padding: 20px;
   position:fixed;
   left: 0;
@@ -361,4 +375,25 @@ a {
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
+}
+.container .virty2 {
+  width: 800px;
+  margin-top: 0px;
+  position: relative;
+  background-color: black;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(-45deg, var(--t1, #40c9ff), var(--t2, #e81cff) 51%, var(--t1, #40c9ff)) var(--z, 0)/ 200%;
+  box-shadow: 10px 12px 10px rgba(65, 63, 63, 0.8);
+  border-radius: 10px 10px;
+  transition: 1.5s;
+}
+.container .virty2:hover { --z: 100%; }
+.container .virty2-1 {
+  --t1: #40c9ff;
+  --t2: #e81cff;
 }
