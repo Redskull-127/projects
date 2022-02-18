@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  transition: 0.7s;
+  transition: 2.5s;
   height: fit-content;
 }
 .body:hover {
