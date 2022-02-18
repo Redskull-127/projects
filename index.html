@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     Meer Tarbani's Projects
   </title>
@@ -16,27 +18,44 @@
   <link rel="icon" type="image/gif" href="assets/images/final.gif">
   <script src="script/indexscript.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 
 </head>
 
 <body class="body body-1">
   <div id="preloader"></div>
+  <div class="alert alert-success fade in out alert-dismissible" style="position: absolute;top:0">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Welcome!</strong> Click "X" to dismiss.
+  </div>
 
   <center>
-    <div id="mySidebar" class="sidebar">
+    <!-- <div id="mySidebar" class="sidebar">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <center>
         <h1 style="color: antiquewhite;"><a onclick="scrolldivvirty()">Source-Code</a></h1>
         <hr>
         <h1 style="color: antiquewhite;"><a onclick="scrolldiv()">Downloads</a></h1>
-        <a href="https://github.com/Redskull-127"><img src="assets/images/github.png" alt="GitHub" height="75" style="position: relative; margin-top: 150%;"></a>
+        <hr>
+        <h1 style="color: antiquewhite;"><a onclick="scrolldivcredits()">Credits</a></h1>
+        <a href="https://github.com/Redskull-127"><img src="assets/images/github.png" alt="GitHub" height="75"
+            style="position: relative; margin-top: 130%;"></a>
       </center>
+    </div> -->
+    <div class="nav">
+      <!-- <h2 onclick="location.href='pageurl.html';">Source-Code</h2> -->
+      <h2><a onclick="scrolldivvirty()">Source-Code</a></h2>
+      <h2><a onclick="scrolldiv()">Downloads</a></h2>
+      <h2><a onclick="scrolldivcredits()">Credits</a></h2>
     </div>
-
-    <div id="main">
+    <!-- <div id="main">
       <button class="openbtn" onclick="openNav()">&#9776;</button>
-    </div>
-    <h1 id="typewriter" style="margin-top: 40px; font-size:xx-large; margin-bottom:30px; width:fit-content">All
+    </div> -->
+    <h1 id="typewriter" style="margin-top: 50px; font-size:xx-large; margin-bottom:30px; width:fit-content">All
       Open-Source Projects ...</h1>
     <!-- <div class="typewriter">
       <h1>All Open-Source Projects ...</h1>
@@ -58,7 +77,7 @@
                   <a class="link" href="https://github.com/Redskull-127/Manager">Github</a>
                 </b>
               </p>
-              <a class="btn" href="https://redskull-127.github.io/Manager" type="button">OPEN</a>
+              <a class="btn" href="https://redskull.me/Manager" type="button">OPEN</a>
             </div>
           </div>
         </div>
@@ -78,7 +97,7 @@
                   <a class="link" href="https://github.com/Redskull-127/BINGE">Github</a>
                 </b>
               </p>
-              <a class="btn" href="https://redskull-127.github.io/BINGE/" type="button">Download Now</a>
+              <a class="btn" href="https://redskull.me/BINGE/" type="button">Download Now</a>
             </div>
           </div>
         </div>
@@ -129,15 +148,27 @@
           <table>
             <tr>
               <td style="margin-left: auto;"> </td>
-              <td style="padding-right: 50px;"><h3>Windows</h3></td>
-              <td><h3>Android</h3></td>
+              <td style="padding-right: 50px;">
+                <h3>Windows</h3>
+              </td>
+              <td>
+                <h3>Android</h3>
+              </td>
+              <td style="padding-left: 50px;">
+                <h3>Source</h3>
+              </td>
             </tr>
             <tr>
               <td style="padding-right: 50px;">
                 <h3>Pass-Manager</h3>
               </td>
-              <td><a href="https://github.com/Redskull-127/Manager/releases/download/PassManagerv1.0.0/passmgr.exe">Here</a></td>
-              <td><a href="https://github.com/Redskull-127/Manager/releases/download/PassManagerv1.0.0/PassManager.apk">Here</a></td>
+              <td><a
+                  href="https://github.com/Redskull-127/Manager/releases/download/PassManagerv1.0.0/passmgr.exe">Here</a>
+              </td>
+              <td><a
+                  href="https://github.com/Redskull-127/Manager/releases/download/PassManagerv1.0.0/PassManager.apk">Here</a>
+              </td>
+              <td style="padding-left: 50px;"><a href="https://github.com/Redskull-127/Manager">Here</a></td>
             </tr>
             <tr>
               <td style="padding-right: 50px;">
@@ -145,6 +176,7 @@
               </td>
               <td>N/A</td>
               <td><a href="https://github.com/Redskull-127/BINGE_APP/releases/download/BINGE/app.apk">Here</a></td>
+              <td style="padding-left: 50px;"><a href="https://github.com/Redskull-127/BINGE_APP">Here</a></td>
             </tr>
             <tr>
               <td style="padding-right: 50px;">
@@ -152,12 +184,13 @@
               </td>
               <td>N/A</td>
               <td><a href="https://github.com/Redskull-127/LIO/releases/download/Lio-v1.0.0/app.apk">Here</a></td>
+              <td style="padding-left: 50px;"><a href="https://github.com/Redskull-127/LIO">Here</a></td>
             </tr>
           </table>
         </div>
       </div>
 
-      <div class="skull" style="padding-top: 30px;">
+      <div class="skull" style="padding-top: 30px;" id="credits">
         <div class="face face1 skull1">
           <div class="content">
             <img style="padding-top: 25px;" id="skull" src="assets/images/final-unscreen.gif"

@@ -21,3 +21,7 @@ function scrolldivvirty() {
   var elem = document.getElementById("scroll");
   elem.scrollIntoView();
 }
+function scrolldivcredits() {
+  var elem = document.getElementById("credits");
+  elem.scrollIntoView();
+}
