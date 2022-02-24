@@ -166,6 +166,12 @@ body {
   box-shadow: 0 0 50px #e78932;
   background-color: #e78932;
 }
+
+.container .card:hover .card5 {
+  transform: translateY(0);
+  box-shadow: 0 0 50px #f60000;
+  background-color: #f60000;
+}
 .container .card .face.face1 .content {
   opacity: 0.2;
   transition: 0.5s;
