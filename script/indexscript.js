@@ -25,3 +25,4 @@ function scrolldivcredits() {
   var elem = document.getElementById("credits");
   elem.scrollIntoView();
 }
+$('#your-custom-id').mdbDropSearch();
