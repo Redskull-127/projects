@@ -25,4 +25,33 @@ function scrolldivcredits() {
   var elem = document.getElementById("credits");
   elem.scrollIntoView();
 }
-$('#your-custom-id').mdbDropSearch();
+$("#your-custom-id").mdbDropSearch();
+
+function carsule() {
+  var fileextension = [".png", ".jpg"];
+  var dir = "/assets/images/";
+  $(data)
+    .find(
+      "a:contains(" +
+        fileextension[0] +
+        "), a:contains(" +
+        fileextension[1] +
+        ")"
+    )
+    .each(function () {
+      $.ajax({
+        url: dir,
+        success: function (data) {
+          //List all .png file names in the page
+          $(data)
+            .find("a:contains(" + fileextension + ")")
+            .each(function () {
+              var filename = this.href
+                .replace(window.location.host, "")
+                .replace("http://", "");
+              $("body").append("<img src='" + dir + filename + "'>");
+            });
+        },
+      });
+    });
+}

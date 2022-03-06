@@ -433,10 +433,41 @@ a {
 }
 
 .nav a{
-  padding: 8px 8px 8px 32px;
+  margin: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: block;
   transition: 0.3s;
 }
+
+.container .virty3 {
+  width: 800px;
+  padding-top: 0px;
+  position: relative;
+  background-color: black;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-wrap: wrap; */
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(
+      -45deg,
+      var(--r1, #40c9ff),
+      var(--r2, #e81cff) 51%,
+      var(--r1, #40c9ff)
+    )
+    var(--q, 0) / 200%;
+  box-shadow: 10px 12px 10px rgba(65, 63, 63, 0.8);
+  border-radius: 10px 10px;
+  transition: 2.5s;
+}
+.container .virty3:hover {
+  --q: 100%;
+}
+.container .virty3-1 {
+  --r1: #40c9ff;
+  --r2: #e81cff;
+}
+
