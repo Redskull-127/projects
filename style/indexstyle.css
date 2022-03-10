@@ -7,7 +7,7 @@ body {
   background: linear-gradient(
       -45deg,
       var(--c1, #8e2de2),
-      var(--c2, #4a00e0) 51%,
+      var(--c2, #048992) 51%,
       var(--c1, #8e2de2)
     )
     var(--x, 0) / 200%;
@@ -23,7 +23,7 @@ body {
 }
 .body-1 {
   --c1: #8e2de2;
-  --c2: #4a00e0;
+  --c2: #048992;
 }
 #typewriter {
   overflow: hidden;
@@ -173,7 +173,7 @@ body {
   background-color: #f60000;
 }
 
-.container .card:hover .card5 {
+.container .card:hover .card6 {
   transform: translateY(0);
   box-shadow: 0 0 50px #bb67f3;
   background-color: #bb61f7;
@@ -435,7 +435,7 @@ a {
   left: 20px;
   text-align: left;
   top:30%;
-  color: #818181;
+  color: #494646;
   font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -443,7 +443,7 @@ a {
   margin: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: #5a5757;
   display: block;
   transition: 0.3s;
 }
@@ -476,5 +476,31 @@ a {
 .container .virty3-1 {
   --r1: #40c9ff;
   --r2: #e81cff;
+}
+
+.container .virty .notification .container{
+  height: 220px;
+  width: 200px;
+  border-radius: 20px 20px;
+  background: linear-gradient(
+      -45deg,
+      var(--s1, #40c9ff),
+      var(--s2, #e81cff) 51%,
+      var(--s1, #40c9ff)
+    )
+    var(--u, 0) / 200%;
+  position: fixed;
+  top: 180px;
+  left: 15px;
+  align-content: center;
+  align-items: center;
+  transition: 2s;
+}
+.notification .container:hover {
+  --u: 100%;
+}
+.notification .container-1 {
+  --s1: #40c9ff;
+  --s2: #e81cff;
 }
 
