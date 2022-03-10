@@ -32,12 +32,14 @@ body {
   white-space: nowrap;
   color: white;
   margin: 0 auto;
+  transition: 2s;
   letter-spacing: 0.19em;
   animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 #typewriter:hover {
   background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
   -webkit-text-fill-color: transparent;
+  transition: 2s;
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -48,7 +50,7 @@ body {
     width: 0;
   }
   to {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -56,6 +58,7 @@ body {
 @keyframes blink-caret {
   from,
   to {
+    transition: 2s;
     border-color: transparent;
   }
   50% {
@@ -94,11 +97,12 @@ body {
       var(--d1, #40c9ff)
     )
     var(--y, 0) / 200%;
-  box-shadow: 10px 12px 10px rgba(65, 63, 63, 0.8);
+  box-shadow: var(--virtysh, 10px 12px 10px rgba(78, 77, 77, 0.8));
   transition: 2.5s;
   border-radius: 10px 10px;
 }
 .container .virty:hover {
+  --virtysh: 10px 12px 10px rgba(12, 11, 11, 0.8);
   --y: 100%;
 }
 .container .virty-1 {
@@ -420,11 +424,12 @@ a {
       var(--t1, #40c9ff)
     )
     var(--z, 0) / 200%;
-  box-shadow: 10px 12px 10px rgba(65, 63, 63, 0.8);
+    box-shadow: var(--virty2sh, 10px 12px 10px rgba(78, 77, 77, 0.8));
   border-radius: 10px 10px;
   transition: 2.5s;
 }
 .container .virty2:hover {
+  --virty2sh: 10px 12px 10px rgba(14, 13, 13, 0.8);
   --z: 100%;
 }
 .container .virty2-1 {
@@ -545,4 +550,13 @@ a {
 .updates .container-1 {
   --s1: #40c9ff;
   --s2: #e81cff;
+}
+
+.downarrow{
+  margin-top: var(--mararr, 30px);
+  transition: 1s;
+}
+
+.downarrow:hover{
+  --mararr: 15px;
 }
