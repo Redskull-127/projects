@@ -21,6 +21,7 @@ body {
 .body:hover {
   --x: 100%;
 }
+
 .body-1 {
   --c1: #8e2de2;
   --c2: #048992;
@@ -327,9 +328,10 @@ a {
 
 #preloader {
   background: rgb(0, 0, 0)
-    url("https://gifimage.net/wp-content/uploads/2018/11/circle-loader-gif-2.gif")
+    url("../assets/images/final-unscreen.gif")
     no-repeat center center;
   background-size: 20%;
+  background-position: center top 300px;
   height: 250vh;
   width: 100%;
   position: fixed;
@@ -480,7 +482,7 @@ a {
 
 .container .virty .notification .container{
   height: 220px;
-  width: 200px;
+  width: 220px;
   border-radius: 20px 20px;
   background: linear-gradient(
       -45deg,
@@ -504,3 +506,31 @@ a {
   --s2: #e81cff;
 }
 
+.container .virty .updates .container{
+  height: 220px;
+  width: var(--widup, 70px);
+  border-radius: 20px 20px;
+  background: linear-gradient(
+      -45deg,
+      var(--s1, #40c9ff),
+      var(--s2, #e81cff) 51%,
+      var(--s1, #40c9ff)
+    )
+    var(--u, 0) / 200%;
+  position: fixed;
+  display: flex;
+  flex-wrap:wrap;
+  top: 180px;
+  right: 15px;
+  align-content: space-around;
+  align-items: center;
+  transition: 2s;
+}
+.updates .container:hover {
+  --u: 100%;
+  --widup: 200px;
+}
+.updates .container-1 {
+  --s1: #40c9ff;
+  --s2: #e81cff;
+}
