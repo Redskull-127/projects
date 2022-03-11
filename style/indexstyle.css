@@ -330,7 +330,7 @@ a {
 }
 
 #preloader {
-  background: rgb(0, 0, 0) url("../assets/images/final-unscreen.gif") no-repeat
+  background: rgb(0, 0, 0) url("../assets/images/final-unscreen.gif") repeat
     center center;
   background-size: 20%;
   background-position: center top 300px;
