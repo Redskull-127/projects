@@ -519,7 +519,7 @@ a {
 
 .container .virty .notification .container {
   height: 220px;
-  width: var(--widnoti, 50px);
+  width: var(--widnoti, 60px);
   border-radius: 20px 20px;
   background: linear-gradient(
       -45deg,

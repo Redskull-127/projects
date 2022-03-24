@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/indexstyle.css">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" />  -->
+  <meta name="viewport" content="width=device-width, initial-scale=0" />
   <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
   <link rel="icon" type="image/gif" href="assets/images/final.gif">
   <script src="script/indexscript.js"></script>
@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="module" src="script/firebase.js"></script>
 
   <!-- Tailwind-CSS -->
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -36,31 +37,21 @@
 
 </head>
 
-<body class="body body-1">
+<body class="body body-1" id="body1">
   <div id="preloader"></div>
 
   <center>
-
-    <!-- <div id="main">
-      <button class="openbtn" onclick="openNav()">&#9776;</button>
-    </div> -->
     <h1 id="typewriter" style="margin-top: 50px; font-size:xx-large; margin-bottom:30px; width:fit-content">All
       Open-Source Projects ...</h1>
-    <!-- <div class="typewriter">
-      <h1>All Open-Source Projects ...</h1>
-    </div> -->
     <div class="container" id="scroll">
       <div class="virty">
         <div class="notification">
           <div class="container">
-            <!-- <img src="assets/icons/righthand.svg" height="50" class="righthand"> -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="50 110 256 300" class="righthand">
-              <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
               <path
                 d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z" />
             </svg>
             <div class="nav">
-              <!-- <h2 onclick="location.href='pageurl.html';">Source-Code</h2> -->
               <h2><a onclick="scrolldivvirty()">Source-Code</a></h2>
               <h2><a onclick="scrolldiv()">Downloads</a></h2>
               <h2><a onclick="scrolldivcredits()">Credits</a></h2>
@@ -270,15 +261,22 @@
       <div class="container" style="padding-top: 50px;">
         <div class="virty3">
           <h1>Current Position</h1>
-          <h2 style="padding-top: 20px;padding-bottom: 20px;"><img src="assets/icons/GSSOC.png" height="40" onclick="location.href='https://gssoc.girlscript.tech/';"> | Contributor</h2>
+          <h2 style="padding-top: 20px;padding-bottom: 20px;"><img src="assets/icons/GSSOC.png" height="40"
+              onclick="location.href='https://gssoc.girlscript.tech/';"> | Contributor</h2>
         </div>
       </div>
       <div class="container" style="padding-top: 50px;">
         <div class="virty4">
           <h1 style="padding-bottom: 30px;">Skills</h1>
-          <h3><img src="https://img.icons8.com/color/48/000000/flutter.png" title="Flutter" class="rotate"/> | <img src="assets/icons/python-unscreen.gif" title="Python" height="50"/> | <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" title="HTML" height="50" class="rotate"/> | <img src="https://img.icons8.com/color/48/000000/css3.png" title="CSS" height="50" class="rotate"/> | <img src="assets/icons/js.gif" title="JS" height="45"/> | <img src="https://img.icons8.com/plasticine/100/000000/bash.png" title="Bash" class="rotate" height="50"/></h3>
+          <h3><img src="https://img.icons8.com/color/48/000000/flutter.png" title="Flutter" class="rotate" /> | <img
+              src="assets/icons/python-unscreen.gif" title="Python" height="50" /> | <img
+              src="https://img.icons8.com/color/48/000000/html-5--v1.png" title="HTML" height="50" class="rotate" /> |
+            <img src="https://img.icons8.com/color/48/000000/css3.png" title="CSS" height="50" class="rotate" /> | <img
+              src="assets/icons/js.gif" title="JS" height="45" /> | <img
+              src="https://img.icons8.com/plasticine/100/000000/bash.png" title="Bash" class="rotate" height="50" />
+          </h3>
           <h3><img src="assets/icons/googlecloud-unscreen.gif" height="85" title="Google Cloud" /></h3>
-          
+
         </div>
       </div>
       <div class="skull" style="padding-top: 30px;" id="credits">
@@ -300,10 +298,16 @@
       </div>
     </div>
   </center>
+
+
   <script>
     var loader = document.getElementById("preloader");
     window.addEventListener("load", function () {
       loader.style.display = "none";
     })
   </script>
+</body>
+
+<body id="body2">
+
 </body>
