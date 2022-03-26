@@ -25,63 +25,68 @@ function scrolldivcredits() {
   var elem = document.getElementById("credits");
   elem.scrollIntoView();
 }
-// $("#your-custom-id").mdbDropSearch();
 
-// function carsule() {
-//   var fileextension = [".png", ".jpg"];
-//   var dir = "/assets/images/";
-//   $(data)
-//     .find(
-//       "a:contains(" +
-//         fileextension[0] +
-//         "), a:contains(" +
-//         fileextension[1] +
-//         ")"
-//     )
-//     .each(function () {
-//       $.ajax({
-//         url: dir,
-//         success: function (data) {
-//           //List all .png file names in the page
-//           $(data)
-//             .find("a:contains(" + fileextension + ")")
-//             .each(function () {
-//               var filename = this.href
-//                 .replace(window.location.host, "")
-//                 .replace("http://", "");
-//               $("body").append("<img src='" + dir + filename + "'>");
-//             });
-//         },
-//       });
-//     });
-// }
-// const isMobile = window.matchMedia("only screen and (max-width : 760px)").matches;
+if (/Android|iPhone/i.test(navigator.userAgent)) {
+  window.onload = function () {
+    alert(
+      "Visit this on a Computer for Better View\nElse, turn on 'Desktop Mode'!"
+    );
+  };
+  console.log("using phone");
+} else {
+  console.log("Not using mobile");
+}
 
-// if(isMobile){
-//   console.log("Using Mobile Device");
+const api_url =
+  "https://newsapi.org/v2/everything?q=coding&apiKey=7ca85b76c38d41c09f5c0704620bbae8";
+let news_data = null;
+let counter = 0;
+const new_data = async () => {
+  await fetch(api_url)
+    .then((res) => res.json())
+    .then((res) => {
+      news_data = res.articles;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  return news_data;
+};
 
-// }
-// else{
-//   console.log("Not Using Mobile");
-// }
-
-if(/Android|iPhone/i.test(navigator.userAgent)){
-  window.onload= function() {
-    alert("Visit this on a Computer for Better View\nElse, turn on 'Desktop Mode'!");
+const fetchNews = async () => {
+  const data = await new_data();
+  if (data == null) {
+    aut.textContent = "Wait";
   }
-  console.log("using phone")
-}
-else{
-  console.log("Not using mobile")
-}
+  const aut = document.getElementById("authorname");
+  const imgNews = document.getElementById("newsimg");
+  aut.textContent = data[counter].title;
+  const imgData = `<img src=${data[counter].urlToImage} height="90"  />`;
+  console.log(data[0].urlToImage);
+  imgNews.innerHTML = imgData;
+  if (counter <= 20) {
+    counter = counter + 1;
+  }
+  var i = 0;
+  function move() {
+    if (i == 0) {
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 1;
+      var id = setInterval(frame, 45);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width++;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+  }
+  move()
+};
 
-console.log("Working");
-
-
-// Firebase
-// Import the functions you need from the SDKs you need
-
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+fetchNews();
+setInterval(fetchNews, 5000);
