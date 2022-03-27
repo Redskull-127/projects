@@ -42,7 +42,9 @@ let page = 0;
 // const api_url =
   // "https://newsapi.org/v2/everything?q=coding&apiKey=7ca85b76c38d41c09f5c0704620bbae8";
 
-const api_url = "https://newsdata.io/api/1/news?apikey=pub_5842bb3690f382c591caee103bdc59be8d3f&country=in,us&category=technology&language=en&page="+page;
+// const api_url = "https://newsdata.io/api/1/news?apikey=pub_5842bb3690f382c591caee103bdc59be8d3f&country=in,us&category=technology&language=en&page="+page;
+
+const api_url = "https://inshortsapi.vercel.app/news?category=technology&page="+page;
 
 let news_data = null;
 let counter = 0;
@@ -50,7 +52,7 @@ const new_data = async () => {
   await fetch(api_url)
     .then((res) => res.json())
     .then((res) => {
-      news_data = res.results;
+      news_data = res.data;
     })
     .catch((err) => {
       console.log(err);
@@ -66,15 +68,17 @@ const fetchNews = async () => {
   const aut = document.getElementById("authorname");
   aut.textContent = data[counter].title;
   const imgNews = document.getElementById("newsimg");
-  const imgData = `<img src=${data[counter].image_url} height="90"  />`;
-  console.log(data[0].urlToImage);
+  const imgData = `<img src=${data[counter].imageUrl} height="90"  />`;
   imgNews.innerHTML = imgData;
   const des = document.getElementById("des");
-  des.textContent = data[counter].description;
-  if (counter <= 20) {
+  des.textContent = data[counter].content;
+  const but = document.getElementById("newsbutton");
+  const butdata = `<a href=${data[counter].readMoreUrl} >Read More</a>`
+  but.innerHTML = butdata;
+  if (counter <= 25) {
     counter = counter + 1;
   }
-  if (counter == 20) {
+  if (counter == 25) {
     page++;
   }
   var i = 0;

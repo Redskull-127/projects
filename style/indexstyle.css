@@ -665,3 +665,10 @@ a {
   height: 10px;
   background-color: green;
 }
+
+#newsbutton{
+  text-align: center;
+  border: 1px solid grey;
+  font-size: 25px;
+  border-radius: 10px;
+}
