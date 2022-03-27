@@ -42,7 +42,7 @@ let page = 0;
 // const api_url =
   // "https://newsapi.org/v2/everything?q=coding&apiKey=7ca85b76c38d41c09f5c0704620bbae8";
 
-const api_url = "https://newsdata.io/api/1/news?apikey=pub_5842bb3690f382c591caee103bdc59be8d3f&country=in,us&category=technology&page="+page;
+const api_url = "https://newsdata.io/api/1/news?apikey=pub_5842bb3690f382c591caee103bdc59be8d3f&country=in,us&category=technology&language=en&page="+page;
 
 let news_data = null;
 let counter = 0;
