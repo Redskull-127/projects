@@ -3,7 +3,10 @@ function scrollDown() {
 }
 history.scrollRestoration = "manual";
 // window.onload = scrollToBottom;
-
+function scrollUp() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+history.scrollRestoration = "manual";
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
@@ -40,11 +43,12 @@ if (/Android|iPhone/i.test(navigator.userAgent)) {
 let page = 0;
 
 // const api_url =
-  // "https://newsapi.org/v2/everything?q=coding&apiKey=7ca85b76c38d41c09f5c0704620bbae8";
+// "https://newsapi.org/v2/everything?q=coding&apiKey=7ca85b76c38d41c09f5c0704620bbae8";
 
 // const api_url = "https://newsdata.io/api/1/news?apikey=pub_5842bb3690f382c591caee103bdc59be8d3f&country=in,us&category=technology&language=en&page="+page;
 
-const api_url = "https://inshortsapi.vercel.app/news?category=technology&page="+page;
+const api_url =
+  "https://inshortsapi.vercel.app/news?category=technology&page=" + page;
 
 let news_data = null;
 let counter = 0;
@@ -73,8 +77,10 @@ const fetchNews = async () => {
   const des = document.getElementById("des");
   des.textContent = data[counter].content;
   const but = document.getElementById("newsbutton");
-  const butdata = `<a href=${data[counter].readMoreUrl} >Read More</a>`
-  but.innerHTML = butdata;
+  const butdata = `<a href=${data[counter].readMoreUrl} >Read More</a>`;
+  if (data[counter].readMoreUrl != "null") {
+    but.innerHTML = butdata;
+  }
   if (counter <= 25) {
     counter = counter + 1;
   }
@@ -99,7 +105,7 @@ const fetchNews = async () => {
       }
     }
   }
-  move()
+  move();
 };
 
 fetchNews();

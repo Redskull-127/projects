@@ -640,6 +640,13 @@ a {
 .downarrow:hover {
   --mararr: 15px;
 }
+.container .uparrow{
+  margin-bottom: var(--mararrup, 30px);
+  transition: 1s;
+}
+.container .uparrow:hover{
+  --mararrup: 60px;
+}
 
 .rotate {
   /* padding-top: 50px; */
