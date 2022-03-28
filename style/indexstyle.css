@@ -30,14 +30,19 @@ body {
   overflow: hidden;
   border-right: 0.15em solid orange;
   white-space: nowrap;
-  color: white;
+  background: var(--txtcol, rgba(197, 196, 196, 0.705));
+  /* color: white; */
+  border-radius: 3px;
   margin: 0 auto;
   transition: 2s;
   letter-spacing: 0.19em;
   animation: typing 5s steps(40, end), blink-caret 0.75s step-end infinite;
+  font-family: sans-serif;
 }
 #typewriter:hover {
-  background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  /* background: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44); */
+  --txtcol: linear-gradient(to right, #f32170, #ff6b08, #cf23cf, #eedd44);
+  box-shadow: 0px 7px 7px 7px grey;
   -webkit-text-fill-color: transparent;
   transition: 2s;
   -webkit-background-clip: text;
