@@ -1,12 +1,16 @@
-function scrollDown() {
-  window.scrollTo(0, document.body.scrollHeight);
-}
-history.scrollRestoration = "manual";
+// function scrollDown() {
+//   window.scrollTo(0, document.body.scrollHeight);
+// }
+// history.scrollRestoration = "manual";
 // window.onload = scrollToBottom;
 function scrollUp() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-history.scrollRestoration = "manual";
+
+function scrollDown() {
+  window.scrollTo({ top: 650, behavior: 'smooth' });
+}
+
 function openNav() {
   document.getElementById("mySidebar").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
