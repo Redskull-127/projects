@@ -189,6 +189,12 @@ body {
   background-color: #9309f0;
 }
 
+.container .card:hover .card7 {
+  transform: translateY(0);
+  box-shadow: 0 0 50px #ff5202;
+  background-color: #ff5202;
+}
+
 .container .card .face.face1 .content {
   opacity: 0.2;
   transition: 0.5s;
